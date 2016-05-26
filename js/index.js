@@ -124,6 +124,18 @@ var things = [{
   "source": "http://codepen.io/jondcoleman/pen/GZBjLr",
   "details": "d3.js heatmap chart"
 }, {
+  "category": "front end",
+  "name": "tic tac toe",
+  "link": "http://codepen.io/jondcoleman/full/OybRWG",
+  "source": "http://codepen.io/jondcoleman/pen/OybRWG",
+  "details": "javascript implementation of tic tac toe game"
+}, {
+  "category": "front end",
+  "name": "simon",
+  "link": "http://codepen.io/jondcoleman/full/XmgGeZ",
+  "source": "http://codepen.io/jondcoleman/pen/XmgGeZ",
+  "details": "javascript implementation of simon game"
+}, {
   "category": "utility",
   "name": "file search",
   "link": "https://github.com/jondcoleman/file-search",
