@@ -104,30 +104,30 @@ var things = [{
   "details": "node.js command line utility for indexing directories and searching for file names"
 }];
 
-var categories = _.uniq(things.map(function (thing) {
+var categories = _.uniq(things.map(function(thing) {
   return thing.category;
 }));
 
-categoryThings = categories.map(function (cat) {
-  var thingsByCategory = things.filter(function (thing) {
+var categoryThings = categories.map(function(cat) {
+  var thingsByCategory = things.filter(function(thing) {
     return thing.category === cat;
   });
   return { category: cat, things: thingsByCategory };
 });
 
-var thingsSection = document.getElementById('thing-section');
+document.addEventListener("DOMContentLoaded", function() {
+  var thingsSection = document.getElementById('thing-section');
 
-var thingsHtml = categoryThings.map(function (cat) {
-  console.log(cat);
-  var content = "<h3 class=\"section-header\">" + cat.category + " </h3>";
-  content += '<ol>';
-  var innerContent = '';
-  cat.things.forEach(function (thing) {
-    innerContent += "<li><a href=\"" + thing.link + "\">" + thing.name + "</a> | <a href=\"" + thing.source + "\">source</a></li>";
-    innerContent += "<p>- " + thing.details + "</p>";
+  var thingsHtml = categoryThings.map(function(cat) {
+    var content = "<h3 class=\"section-header\">" + cat.category + " </h3>";
+    content += '<ol>';
+    var innerContent = '';
+    cat.things.forEach(function(thing) {
+      innerContent += "<li><a href=\"" + thing.link + "\">" + thing.name + "</a> | <a href=\"" + thing.source + "\">source</a></li>";
+      innerContent += "<p>- " + thing.details + "</p>";
+    });
+    content += innerContent;
+    content += '</ol>';
+    thingsSection.innerHTML += content;
   });
-  content += innerContent;
-  content += '</ol>';
-  thingsSection.innerHTML += content;
-  console.log(thingsSection);
 });
