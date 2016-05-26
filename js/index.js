@@ -58,6 +58,30 @@ var things = [{
   "source": "https://github.com/jondcoleman/clementine-react",
   "details": "a fork of clementine.js using react"
 }, {
+  "category": "react",
+  "name": "roguelike dungeon crawler",
+  "link": "https://ninja-roguelike.herokuapp.com/",
+  "source": "https://github.com/jondcoleman/roguelike",
+  "details": "dungeon crawler in react"
+}, {
+  "category": "react",
+  "name": "game of life",
+  "link": "http://codepen.io/jondcoleman/full/gPjPbd/",
+  "source": "http://codepen.io/jondcoleman/pen/gPjPbd",
+  "details": "conway's game of life implement in react"
+}, {
+  "category": "react",
+  "name": "time to cook",
+  "link": "http://codepen.io/jondcoleman/full/pgwrrJ/",
+  "source": "http://codepen.io/jondcoleman/pen/pgwrrJ",
+  "details": "a recipe keeper using react and localstorage"
+}, {
+  "category": "react",
+  "name": "markdown previewer",
+  "link": "http://codepen.io/jondcoleman/full/mVmXOJ/",
+  "source": "http://codepen.io/jondcoleman/pen/mVmXOJ",
+  "details": "real time markdown preview"
+}, {
   "category": "microservice json api",
   "name": "url shortener",
   "link": "https://url-shrtnr-fcc.herokuapp.com/",
@@ -87,30 +111,6 @@ var things = [{
   "link": "https://whoami-fcc.herokuapp.com/api/whoami",
   "source": "https://github.com/jondcoleman/header-parser",
   "details": "obtain ipaddress, language, and os"
-}, {
-  "category": "react",
-  "name": "roguelike dungeon crawler",
-  "link": "https://ninja-roguelike.herokuapp.com/",
-  "source": "https://github.com/jondcoleman/roguelike",
-  "details": "dungeon crawler in react"
-}, {
-  "category": "react",
-  "name": "game of life",
-  "link": "http://codepen.io/jondcoleman/full/gPjPbd/",
-  "source": "http://codepen.io/jondcoleman/pen/gPjPbd",
-  "details": "conway's game of life implement in react"
-}, {
-  "category": "react",
-  "name": "time to cook",
-  "link": "http://codepen.io/jondcoleman/full/pgwrrJ/",
-  "source": "http://codepen.io/jondcoleman/pen/pgwrrJ",
-  "details": "a recipe keeper using react and localstorage"
-}, {
-  "category": "react",
-  "name": "markdown previewer",
-  "link": "http://codepen.io/jondcoleman/full/mVmXOJ/",
-  "source": "http://codepen.io/jondcoleman/pen/mVmXOJ",
-  "details": "real time markdown preview"
 }, {
   "category": "d3",
   "name": "scatterplot",
