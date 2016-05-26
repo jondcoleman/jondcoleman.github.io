@@ -136,6 +136,12 @@ var things = [{
   "source": "http://codepen.io/jondcoleman/pen/XmgGeZ",
   "details": "javascript implementation of simon game"
 }, {
+  "category": "front end",
+  "name": "portfolio",
+  "link": "http://www.jonathanc.xyz/",
+  "source": "https://github.com/jondcoleman/jondcoleman.github.io",
+  "details": "my portfolio"
+}, {
   "category": "utility",
   "name": "file search",
   "link": "https://github.com/jondcoleman/file-search",
