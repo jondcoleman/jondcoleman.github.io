@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", function() {
       var innerContent = '';
 
       cat.things.forEach(function(thing) {
-        innerContent += "<li><a href=\"" + thing.link + "\">" + thing.name + "</a> | <a href=\"" + thing.source + "\">source</a></li>";
+        innerContent += "<li><a href=\"" + thing.link + "\" target='_blank'>" + thing.name + "</a> | <a href=\"" + thing.source + "\">source</a></li>";
         innerContent += "<p>- " + thing.details + "</p>";
       });
 
