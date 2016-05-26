@@ -21,3 +21,11 @@ body {
 .ie-warning {
   text-align:center;
 }
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  .social-links > a {
+    margin: 0px 20px 0px 20px;
+    font-size: 175%
+  }
+}
