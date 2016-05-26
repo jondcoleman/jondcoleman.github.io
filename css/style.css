@@ -17,3 +17,7 @@ body {
   color: inherit;
   text-decoration: none;
 }
+
+.ie-warning {
+  text-align:center;
+}
