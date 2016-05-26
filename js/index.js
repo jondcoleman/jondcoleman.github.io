@@ -1,22 +1,23 @@
 "use strict";
 
 function detectIE() {
-  let ua = window.navigator.userAgent;
+  var ua = window.navigator.userAgent;
 
-  let msie = ua.indexOf('MSIE ');
+  var msie = ua.indexOf('MSIE ');
   if (msie > 0) {
     // IE 10 or older => return version number
     return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
   }
 
-  let trident = ua.indexOf('Trident/');
+  var trident = ua.indexOf('Trident/');
   if (trident > 0) {
     // IE 11 => return version number
-    let rv = ua.indexOf('rv:');
+    var rv = ua.indexOf('rv:');
     return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
   }
 
-  let edge = ua.indexOf('Edge/');
+  var edge = ua.indexOf('Edge/');
+  if (edge > 11) return false;
   if (edge > 0) {
     // Edge (IE 12+) => return version number
     return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
@@ -87,25 +88,25 @@ var things = [{
   "source": "https://github.com/jondcoleman/header-parser",
   "details": "obtain ipaddress, language, and os"
 }, {
-  "category": "React",
+  "category": "react",
   "name": "roguelike dungeon crawler",
   "link": "https://ninja-roguelike.herokuapp.com/",
   "source": "https://github.com/jondcoleman/roguelike",
-  "details": "dungeon crawler in React"
+  "details": "dungeon crawler in react"
 }, {
-  "category": "React",
+  "category": "react",
   "name": "game of life",
   "link": "http://codepen.io/jondcoleman/full/gPjPbd/",
   "source": "http://codepen.io/jondcoleman/pen/gPjPbd",
-  "details": "conway's game of life implement in React"
+  "details": "conway's game of life implement in react"
 }, {
-  "category": "React",
+  "category": "react",
   "name": "time to cook",
   "link": "http://codepen.io/jondcoleman/full/pgwrrJ/",
   "source": "http://codepen.io/jondcoleman/pen/pgwrrJ",
-  "details": "a recipe keeper using React and localstorage"
+  "details": "a recipe keeper using react and localstorage"
 }, {
-  "category": "React",
+  "category": "react",
   "name": "markdown previewer",
   "link": "http://codepen.io/jondcoleman/full/mVmXOJ/",
   "source": "http://codepen.io/jondcoleman/pen/mVmXOJ",
@@ -130,20 +131,18 @@ var things = [{
   "details": "node.js command line utility for indexing directories and searching for file names"
 }];
 
-var categories = _.uniq(things.map(function(thing) {
-  return thing.category;
-}));
-
-var categoryThings = categories.map(function(cat) {
-  var thingsByCategory = things.filter(function(thing) {
-    return thing.category === cat;
-  });
-  return { category: cat, things: thingsByCategory };
-});
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
+  var categories = _.uniq(things.map(function(thing) {
+    return thing.category;
+  }));
+
+  var categoryThings = categories.map(function(cat) {
+    var thingsByCategory = things.filter(function(thing) {
+      return thing.category === cat;
+    });
+    return { category: cat, things: thingsByCategory };
+  });
+
   var thingsSection = document.getElementById('thing-section');
 
   if (detectIE()) {
