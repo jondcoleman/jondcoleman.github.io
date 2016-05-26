@@ -9,7 +9,7 @@ body {
   margin: 0 auto;
 }
 
-.intro-header, .social-links .heroku-note {
+.intro-header, .social-links, .heroku-note {
   text-align: center;
 }
 
