@@ -68,7 +68,7 @@ var things = [{
   "name": "game of life",
   "link": "http://codepen.io/jondcoleman/full/gPjPbd/",
   "source": "http://codepen.io/jondcoleman/pen/gPjPbd",
-  "details": "conway's game of life implement in react"
+  "details": "conway's game of life implemented in react"
 }, {
   "category": "react",
   "name": "time to cook",
