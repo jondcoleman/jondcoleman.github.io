@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function() {
   var thingsSection = document.getElementById('thing-section');
 
   if (detectIE()) {
-    thingsSection.innerHTML('Please use a modern browser to see my projects :)')
+    thingsSection.innerHTML = '<p>Please use a modern browser to see my projects :)</p>'
   } else {
     var thingsHtml = categoryThings.map(function(cat) {
       var content = "<h3 class=\"section-header\">" + cat.category + " </h3>";
