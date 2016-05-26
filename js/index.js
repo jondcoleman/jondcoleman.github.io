@@ -1,5 +1,31 @@
 "use strict";
 
+function detectIE() {
+  let ua = window.navigator.userAgent;
+
+  let msie = ua.indexOf('MSIE ');
+  if (msie > 0) {
+    // IE 10 or older => return version number
+    return parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+  }
+
+  let trident = ua.indexOf('Trident/');
+  if (trident > 0) {
+    // IE 11 => return version number
+    let rv = ua.indexOf('rv:');
+    return parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+  }
+
+  let edge = ua.indexOf('Edge/');
+  if (edge > 0) {
+    // Edge (IE 12+) => return version number
+    return parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+  }
+
+  // other browser
+  return false;
+}
+
 var things = [{
   "category": "full stack",
   "name": "stock chart",
@@ -115,19 +141,28 @@ var categoryThings = categories.map(function(cat) {
   return { category: cat, things: thingsByCategory };
 });
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
   var thingsSection = document.getElementById('thing-section');
 
-  var thingsHtml = categoryThings.map(function(cat) {
-    var content = "<h3 class=\"section-header\">" + cat.category + " </h3>";
-    content += '<ol>';
-    var innerContent = '';
-    cat.things.forEach(function(thing) {
-      innerContent += "<li><a href=\"" + thing.link + "\">" + thing.name + "</a> | <a href=\"" + thing.source + "\">source</a></li>";
-      innerContent += "<p>- " + thing.details + "</p>";
+  if (detectIE()) {
+    thingsSection.innerHTML('Please use a modern browser to see my projects :)')
+  } else {
+    var thingsHtml = categoryThings.map(function(cat) {
+      var content = "<h3 class=\"section-header\">" + cat.category + " </h3>";
+      content += '<ol>';
+      var innerContent = '';
+
+      cat.things.forEach(function(thing) {
+        innerContent += "<li><a href=\"" + thing.link + "\">" + thing.name + "</a> | <a href=\"" + thing.source + "\">source</a></li>";
+        innerContent += "<p>- " + thing.details + "</p>";
+      });
+
+      content += innerContent;
+      content += '</ol>';
+
+      thingsSection.innerHTML += content;
     });
-    content += innerContent;
-    content += '</ol>';
-    thingsSection.innerHTML += content;
-  });
+  }
 });
