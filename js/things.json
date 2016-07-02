@@ -1,4 +1,4 @@
-var things = [{
+[{
   "category": "full stack",
   "name": "stock chart",
   "link": "https://stock-graph.herokuapp.com/",
