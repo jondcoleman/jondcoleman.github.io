@@ -48,7 +48,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
 
       categoryThings.forEach(cat => {
-        let content = `<h3 class="section-header">${cat.category}</h3>`
+        var content = `<h3 class="section-header">${cat.category}</h3>`
         content += '<ol>'
         const innerContent = cat.things.map(thing => `<li>
               <a href="${thing.link}" target='_blank'>${thing.name}</a> |
