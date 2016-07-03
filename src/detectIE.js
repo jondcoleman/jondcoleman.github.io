@@ -24,3 +24,5 @@ function detectIE() {
   // other browser
   return false
 }
+
+export default detectIE

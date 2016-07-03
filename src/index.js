@@ -1,4 +1,5 @@
 /* global things detectIE*/
+import detectIE from './detectIE'
 
 function uniq(arr) {
   const newArr = []
@@ -36,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     thingsSection.innerHTML = `<p class="ie-warning">Please use a modern browser
      to see my projects :)</p>`
   } else {
-    getJSON('js/things.json', things => {
+    getJSON('public/things.json', things => {
       const categories = uniq(things.map(thing => thing.category))
 
       const categoryThings = categories.map(cat => {
@@ -48,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
 
       categoryThings.forEach(cat => {
-        var content = `<h3 class="section-header">${cat.category}</h3>`
+        let content = `<h3 class="section-header">${cat.category}</h3>`
         content += '<ol>'
         const innerContent = cat.things.map(thing => `<li>
               <a href="${thing.link}" target='_blank'>${thing.name}</a> |
