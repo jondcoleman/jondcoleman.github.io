@@ -6,6 +6,12 @@
   "details": "a minimal chart application for stock values using socket.io for real-time updates across clients, chart.js, and on the client side, a vanilla js implementation of the redux pattern."
 }, {
   "category": "full stack",
+  "name": "book swap",
+  "link": "https://swap-my-book.herokuapp.com/",
+  "source": "https://github.com/jondcoleman/book-trader",
+  "details": "book trading app using feathers.js, react, redux, and foundation css."
+}, {
+  "category": "full stack",
   "name": "vida nocturna",
   "link": "https://vida-nocturna.herokuapp.com/",
   "source": "https://github.com/jondcoleman/nightlife-app",
