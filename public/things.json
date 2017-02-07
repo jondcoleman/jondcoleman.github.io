@@ -6,7 +6,14 @@
   "details": "a minimal chart application for stock values using socket.io for real-time updates across clients, chart.js, and on the client side, a vanilla js implementation of the redux pattern."
 }, {
   "category": "full stack",
+  "name": "book swap",
+  "link": "https://swap-my-book.herokuapp.com/",
+  "source": "https://github.com/jondcoleman/book-trader",
+  "details": "book trading app using feathers.js, react, redux, and foundation css."
+}, {
+  "category": "full stack",
   "name": "vida nocturna",
+
   "link": "https://vida-nocturna.herokuapp.com/",
   "source": "https://github.com/jondcoleman/nightlife-app",
   "details": "a nightlife coordination app using the yelp api, express and jade"
@@ -40,6 +47,12 @@
   "link": "http://codepen.io/jondcoleman/full/gPjPbd/",
   "source": "http://codepen.io/jondcoleman/pen/gPjPbd",
   "details": "conway's game of life implemented in react"
+}, {
+  "category": "react",
+  "name": "pomodoro",
+  "link": "https://pomodoro1.herokuapp.com/",
+  "source": "https://github.com/jondcoleman/pomodoro",
+  "details": "pomodoro timer using service worker for offline usage as well as custom favicon badge"
 }, {
   "category": "react",
   "name": "time to cook",
