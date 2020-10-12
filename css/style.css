@@ -1,15 +1,12 @@
 body {
-  font-family: 'Cutive Mono';
+  font-family: "Cutive Mono";
   margin-top: 50px;
   margin-bottom: 50px;
 }
 
-.things {
-  width: 80%;
-  margin: 0 auto;
-}
-
-.intro-header, .social-links, .heroku-note {
+.intro-header,
+.social-links,
+.heroku-note {
   text-align: center;
 }
 
@@ -18,14 +15,10 @@ body {
   text-decoration: none;
 }
 
-.ie-warning {
-  text-align:center;
-}
-
 /* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .social-links > a {
     margin: 0px 20px 0px 20px;
-    font-size: 175%
+    font-size: 175%;
   }
 }
